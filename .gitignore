@@ -1,3 +1,6 @@
+# Exclude the generated HTML page
+fresh_tomatoes.html
+
 # PyCharm IDE folder
 #  While technically some of the files in .idea can be checked in safely,
 #  it still causes enough trouble when moving from machine to machine, and
