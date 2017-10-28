@@ -9,7 +9,7 @@ import media
 import fresh_tomatoes
 import json
 
-# load movie data from data file
+# Load movie data from data file
 with open('movies.json') as movie_data:
     movie_list = json.load(movie_data)
 

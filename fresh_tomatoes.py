@@ -27,7 +27,7 @@ def _read_template_file(template_name):
     Read in the HTML template from a file. Makes it easier to update the look
     and feel of the page by using an HTML editor rather than just handling
     inside Python strings.
-    :param template_name: HTML template name for file stored in templates/
+    :param string template_name: HTML template name for file stored in templates/
     :return: Contents from the HTML template file
     """
 
@@ -55,7 +55,7 @@ def _create_movie_tiles_content(movies):
     """
     Parses movie content to format rendering on the page.
 
-    :param movies: List of media.Movie() objects
+    :param list movies: List of media.Movie() objects
     :return: Formatted HTML snippet
     """
     # The HTML content for this section of the page
@@ -81,7 +81,7 @@ def _create_movie_tiles_content(movies):
 def open_movies_page(movies):
     """
     Creates the HTML page from template pieces and opens it in the browser.
-    :param movies: List of media.Movie() objects
+    :param list movies: List of media.Movie() objects
     :return: No return value. Creates HTML page and opens Web browser.
     """
     # Create or overwrite the output file

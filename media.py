@@ -19,9 +19,9 @@ class Movie:
         video ID rather than taking the whole URL for the trailer. That
         would simplify some of the code in fresh_tomatoes.py.
 
-        :param title: The name of the movie
-        :param poster_image_url: URL pointing to the movie's poster image
-        :param trailer_youtube_url: The movie's trailer on YouTube
+        :param string title: The name of the movie
+        :param string poster_image_url: URL for the movie's poster image
+        :param string trailer_youtube_url: The movie's trailer on YouTube
         """
         self.title = title
         self.poster_image_url = poster_image_url
