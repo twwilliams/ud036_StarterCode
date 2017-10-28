@@ -18,8 +18,9 @@ a Web page with the movie data in it.
 
 There are no tests in the
 [master](https://github.com/twwilliams/ud036_StarterCode/tree/master)
-branch. There is a version of the code in the `with-tests` branch that
-has been rewritten to be testable and includes a set of
+branch. There is a version of the code in the
+[with-tests](https://github.com/twwilliams/ud036_StarterCode/tree/with-tests)
+branch that has been rewritten to be testable and includes a set of
 [py.test](https://docs.pytest.org/en/latest/) tests. You will need to
 [install py.test](https://docs.pytest.org/en/latest/getting-started.html#installation)
 if you don't already have it on your system.
