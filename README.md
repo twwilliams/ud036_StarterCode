@@ -25,6 +25,14 @@ branch that has been rewritten to be testable and includes a set of
 [install py.test](https://docs.pytest.org/en/latest/getting-started.html#installation)
 if you don't already have it on your system.
 
+## Running Tests
+Limited to the
+[with-tests](https://github.com/twwilliams/ud036_StarterCode/tree/with-tests)
+branch for now.
+
+1. [Install py.test](https://docs.pytest.org/en/latest/getting-started.html#installation)
+1. From the root of the repository, run `pytest` or `python -m pytest`
+
 ## Contributing
 [Open an issue](https://github.com/twwilliams/ud036_StarterCode/issues)
 if you find bugs or would like to request new features, or fork the
