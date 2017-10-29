@@ -27,7 +27,7 @@ def _read_template_file(template_name):
     Read in the HTML template from a file. Makes it easier to update the look
     and feel of the page by using an HTML editor rather than just handling
     inside Python strings.
-    :param string template_name: HTML template name for file stored in templates/
+    :param string template_name: HTML template name
     :return: Contents from the HTML template file
     """
 
@@ -78,22 +78,33 @@ def _create_movie_tiles_content(movies):
     return content
 
 
+def _create_movies_page(movies):
+    """
+    Creates the HTML page from template pieces and the list of Movie() objects
+    :param list movies: List of media.Movie() objects
+    :return: Output filename
+    """
+
+    # Create or overwrite the output file
+    with open('fresh_tomatoes.html', 'w') as output_file:
+
+        # Replace the movie tiles placeholder generated content
+        rendered_content = MAIN_PAGE_CONTENT.format(
+            movie_tiles=_create_movie_tiles_content(movies))
+
+        # Write content to the file
+        output_file.write(MAIN_PAGE_HEAD + rendered_content)
+
+    return output_file
+
+
 def open_movies_page(movies):
     """
     Creates the HTML page from template pieces and opens it in the browser.
     :param list movies: List of media.Movie() objects
     :return: No return value. Creates HTML page and opens Web browser.
     """
-    # Create or overwrite the output file
-    output_file = open('fresh_tomatoes.html', 'w')
-
-    # Replace the movie tiles placeholder generated content
-    rendered_content = MAIN_PAGE_CONTENT.format(
-        movie_tiles=_create_movie_tiles_content(movies))
-
-    # Output the file
-    output_file.write(MAIN_PAGE_HEAD + rendered_content)
-    output_file.close()
+    output_file = _create_movies_page(movies)
 
     # open the output file in the browser (in a new tab, if possible)
     url = os.path.abspath(output_file.name)
